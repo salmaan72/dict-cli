@@ -1,0 +1,40 @@
+{
+  "name": "dict-cli",
+  "version": "1.0.0",
+  "description": "A simple command line dictionary tool",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint",
+    "start": "nodemon --exec babel-node src/index.js",
+    "build": "npx webpack --mode production --config webpack.config.js",
+    "build:dev": "npx webpack --mode development --config webpack.config.js",
+    "sample": "nodemon --exec babel-node dist/main.js",
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salmaan72/dict-cli.git"
+  },
+  "author": "Salmaan Ahmed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salmaan72/dict-cli/issues"
+  },
+  "homepage": "https://github.com/salmaan72/dict-cli#readme",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "mocha": "^6.1.4"
+  }
+}
