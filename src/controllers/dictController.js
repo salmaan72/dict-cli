@@ -6,8 +6,9 @@ async function getRandomWord(req, res) {
         method: 'get',
         endPoint: 'randomWord'
     });
-
-    res.send(data);
+    
+    // res.send(data);
+    return data;
 }
 
 async function definitions(req, res) {
