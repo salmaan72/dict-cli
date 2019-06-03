@@ -11,7 +11,8 @@ async function axiosRequest({method = 'get', endPoint, word}) {
                 response = await axios.get(`${process.env.HOST}/word/${word}/${endPoint}?api_key=${process.env.API_KEY}`);
             }
         } catch(err) {
-            console.log(err.message);
+            console.log(`\nWord not found.\n\n`);
+            process.exit(1);
         }
         
     }
