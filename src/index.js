@@ -12,6 +12,3 @@
 // app.listen(PORT, function() {
 //     console.log(`Server listening on port ${PORT}`);
 // });
-
-require = require('esm')(module);
-module.exports = require('./bin/dictionary');

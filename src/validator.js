@@ -1,17 +1,17 @@
-import joi from '@hapi/joi';
+// import joi from '@hapi/joi';
 
-async function validator({val}) {
-    const schema = {
-        val: joi.string(),
-    }
+// async function validator({ val }) {
+//   const schema = {
+//     val: joi.string(),
+//   };
 
-    const {error, value} = joi.validate({ val }, schema);
+//   const { error, value } = joi.validate({ val }, schema);
 
-    if(error) {
-        return error;
-    }
+//   if (error) {
+//     return error;
+//   }
 
-    return value;
-}  
+//   return value;
+// }
 
-export {validator}
+// export { validator };
