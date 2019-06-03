@@ -4,7 +4,6 @@ import controller from '../controllers/dictController';
 import { prompt } from 'inquirer';
 import dotenv from 'dotenv';
 import { formatDefinitions, formatRelatedWords, formatExamples } from '../helpers/format';
-import { exists } from 'fs';
 dotenv.config();
 
 program.version('1.0.0')
@@ -168,6 +167,9 @@ const wordGameInput = async (randomSynonym, randomWord) => {
                         wordGameInput(randomSynonym);
                         break;
                     case 'hint':
+                        const shuffledText = randomWord.split('').sort(function(){return 0.5-Math.random()}).join('');
+                        console.log(`\nCharacters of original word are shuffled: ${shuffledText}\n`);
+                        wordGameInput(randomSynonym);
                         break;
                     case 'quit':
                         console.log(`\nThe word is ${randomWord}\n`);
