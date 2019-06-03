@@ -1,7 +1,7 @@
 import { axiosRequest } from '../helpers/axiosHelper';
 import {validator} from '../validator';
 
-async function getRandomWord(req, res) {
+async function getRandomWord() {
     const data = await axiosRequest({
         method: 'get',
         endPoint: 'randomWord'
@@ -11,37 +11,40 @@ async function getRandomWord(req, res) {
     return data;
 }
 
-async function definitions(req, res) {
-    const validParams = await validator({val: req.params.word});
+async function definitions(word) {
+    // const validParams = await validator({val: req.params.word});
 
     const data = await axiosRequest({
         endPoint: 'definitions',
-        word: validParams.val
+        word,
     });
 
-    res.send(data);
+    // res.send(data);
+    return data;
 }
 
-async function examples(req, res) {
-    const validParams = await validator({val: req.params.word});
+async function examples(word) {
+    // const validParams = await validator({val: req.params.word});
 
     const data = await axiosRequest({
         endPoint: 'examples',
-        word: validParams.val
+        word,
     });
 
-    res.send(data);
+    // res.send(data);
+    return data;
 }
 
-async function relatedWords(req, res) {
-    const validParams = await validator({val: req.params.word});
+async function relatedWords(word) {
+    // const validParams = await validator({val: req.params.word});
 
     const data = await axiosRequest({
         endPoint: 'relatedWords',
-        word: validParams.val
+        word,
     });
 
-    res.send(data);
+    // res.send(data);
+    return data;
 }
 
 export default {
