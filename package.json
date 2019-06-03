@@ -4,7 +4,7 @@
   "description": "A simple command line dictionary tool",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint",
+    "lint": "eslint --fix .",
     "start": "babel-node src/bin/dictionary.js",
     "build": "npx webpack --mode production --config webpack.config.js",
     "build:dev": "npx webpack --mode development --config webpack.config.js"
