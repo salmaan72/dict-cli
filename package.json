@@ -24,7 +24,7 @@
   "homepage": "https://github.com/salmaan72/dict-cli#readme",
   "dependencies": {
     "@hapi/joi": "^15.0.3",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "chalk": "^2.4.2",
     "commander": "^2.20.0",
     "dotenv": "^7.0.0",
